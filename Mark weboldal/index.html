@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 600px){
 #logo {
-    width:70px;
+    width:80%;
     top:10%;
 }
 .navbar {
@@ -27,10 +27,19 @@
     margin:0px;
 
  }
+ .cardText {
+    background-color: white;
+    color:black;
+    opacity:0.6;
+    margin-top:70%;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 900;
+}
 }
 @media only screen and (min-width: 600px){
 #logo {
-    width:100%;
+    width:80%;
     text-align: right;
     top:10%;
 }
@@ -47,25 +56,67 @@
 .mobileMenu {
     display: none;
 }
+.cardText {
+    background-color: white;
+    color:black;
+    opacity:0.6;
+    margin-top:70%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 900;
+}
 }
 #header {
     font-size: 7vw;
     font-weight: 900;
-    text-align: left;
+    padding:auto;
+    text-align: center;
 }
-
 .buttons:hover {
     background-color: rgb(65, 117, 65);
 }
+.cardSitt {
+    width:100%;
+    max-width: 200px;
+    height:300px;
+    background-image: url("/murika19.github.io/Mark weboldal/img/104017480_2546187969045023_8133238709130229970_n.jpg");
+    background-size: cover;
+    display: inline-block;
+}
+.cardZold {
+    width:100%;
+    max-width: 200px;
+    height:300px;
+    background-image: url("/murika19.github.io/Mark weboldal/img/96533940_615982505665791_8698489752967446528_n.jpg");
+    background-size: cover;
+    display: inline-block;
+}
+.cardLomtalanitas {
+    width:100%;
+    max-width: 200px;
+    height:300px;
+    background-image: url("/murika19.github.io/Mark weboldal/img/96512601_2632985056943295_2238473183000788992_n.jpg");
+    background-size: cover;
+    display: inline-block;
+}
+.cardEpitoanyag {
+    width:100%;
+    max-width: 200px;
+    height:300px;
+    background-image: url("/murika19.github.io/Mark weboldal/img/104429690_275270637018504_8263534210675615589_n.jpg");
+    background-size: cover;
+    display: inline-block;
+}
+
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-2">
+        <div class="col-4">
            <img src="/murika19.github.io/Mark weboldal/img/LogoMakr_0apVEK.png" alt="Kajtár fuvarozás logo" id="logo"> 
         </div>
-        <div class="col-10" >
+        <div class="col-8" >
             <h1 id="header">Kajtár Fuvarozás</h1>
         </div>
     </div>
@@ -76,16 +127,30 @@
         <div class="col-3 buttons">Kapcsolat</div>
     </div>
     <div class="mobileMenu"><i class="fas fa-bars"></i></div>
-    <div class="row bemutatkozas">
+    <div class="bemutatkozas">
         <h3>Üdvözli önt a Kajtár Fuvarozás oldala!</h3>
-        Vállalkozásom teljes körü építési sitt, lomtalanítás, Zöldhulladék elszállítás, Építőanyag kiszállítást vállal!<br> 
-        <h6>Hogy miért válasszon minket?
-            <br>Lássuk...</h6>
+
+    Vállalkozásom vállalja:<br>
+    <div class="cardSitt"> 
+        <div class="cardText">Építési sitt</div>   
+    </div>
+    <div class="cardZold">
+        <div class="cardText">Zöldhulladék</div>
+    </div>
+    <div class="cardLomtalanitas">
+        <div class="cardText">Lomtalanítás</div> 
+    </div>
+    <div class="cardEpitoanyag">
+        <div class="cardText">Építőanyag</div> 
+    </div><br>
+    elszállítását!
+     
+<h6>Hogy miért válasszon minket?</h6>
       <ul>
           <li>Reális árak</li> 
           <li>Teljes körű kivitelezés</li> 
           <li>Rugalmasság</li>
-          <li>megbízhatóság</li>
+          <li>Megbízhatóság</li>
           <li>Bátságos fiatalos csapat</li>  
        </ul>
     </div>
