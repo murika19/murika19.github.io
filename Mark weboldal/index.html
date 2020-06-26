@@ -9,9 +9,11 @@
     <script src="https://kit.fontawesome.com/216a986463.js" crossorigin="anonymous"></script>
     <title>Kajtár Fuvarozás</title>
     <style>
-        .navbar {
+        div.navbar {
+            position: -webkit-sticky;
             position: sticky;
         }
+
         @media only screen and (min-width: 900px) {
             .cardText {
                 background-color: white;
@@ -66,7 +68,7 @@
                 width: 100%;
                 border-top: 2px solid black;
                 border-bottom: 2px solid black;
-               
+
             }
 
             .buttons {
@@ -153,9 +155,11 @@
             height: 220px;
 
         }
+
         .kapcsolat {
             text-align: center;
         }
+
         .kapcsolatKartya {
             margin: 4%;
             display: inline-block;
@@ -163,21 +167,26 @@
             width: 100%;
             max-width: 200px;
             text-align: center;
-            color:darkseagreen;
+            color: darkseagreen;
             font-weight: 600;
             font-size: 22px;
         }
+
         .udvozli {
             font-size: 20px;
             animation: eltuntetes 10s forwards;
             text-align: center;
         }
-        @keyframes eltuntetes {
-            from {opacity:1;}
-            to{opacity:0;}
-        }
 
-       
+        @keyframes eltuntetes {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -201,8 +210,8 @@
         <div class="mobileMenu"><i class="fas fa-bars"></i></div>
         <div class="bg-success udvozli">Üdvözli önt a Kajtár Fuvarozás oldala!</div>
         <div class="bemutatkozas">
-           
-<h1>Rólunk</h1>
+
+            <h1>Rólunk</h1>
             <h6>Vállalkozásom vállalja:</h6>
             <div class="cardSitt">
                 <div class="cardText">Építési sitt</div>
@@ -219,16 +228,16 @@
             elszállítását!
 
             <h6>Hogy miért válasszon minket?</h6>
-            
-                <ul>
-                    <li>Reális árak</li>
-                    <li>Teljes körű kivitelezés</li>
-                    <li>Rugalmasság</li>
-                    <li>Megbízhatóság</li>
-                    <li>Barátságos fiatalos csapat</li>
-                    <li>Elégedett ügyfelek</li>
-                </ul>
-            
+
+            <ul>
+                <li>Reális árak</li>
+                <li>Teljes körű kivitelezés</li>
+                <li>Rugalmasság</li>
+                <li>Megbízhatóság</li>
+                <li>Barátságos fiatalos csapat</li>
+                <li>Elégedett ügyfelek</li>
+            </ul>
+
         </div>
         <h1>Árlista</h1>
         <table class="table-dark" id="arlista">
@@ -280,7 +289,8 @@
         </div>
     </div>
     <script>
-     
+
     </script>
 </body>
+
 </html>
