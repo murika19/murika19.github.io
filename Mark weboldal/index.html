@@ -222,7 +222,8 @@
 
         #rolunk,
         #arlista,
-        #kapcsolat {
+        #kapcsolat,
+        #velemenyek {
             text-align: center;
         }
 
@@ -238,7 +239,40 @@
             background-color: darkseagreen;
             color:black
             }
-
+            .velemenyek {
+                margin-bottom: 20px;
+            }
+        .velemenyKartya {
+            border:2px solid green;
+            border-radius: 20px;
+            padding: 3%;
+            text-align: center;
+            font-size: 22px;
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+            box-shadow:8px 8px 8px 8px rgb(132, 133, 132);
+        }
+        .velemenyKartya:hover{
+            border:2px solid green;
+            border-radius: 20px;
+            padding: 3%;
+            text-align: center;
+            font-size: 22px;
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+            box-shadow: 0 0 0 0; 
+        }
+        .nev {
+            float:right;
+            color:green;
+        }
+        .facebookLink {
+            color:blue;
+            font-size:70px;
+            margin:auto;
+        }
 
     </style>
 </head>
@@ -255,19 +289,19 @@
             </div>
         </div>
         <div class="row navbar">
-            <a href="#rolunk" class="links">Rólunk</a>
-            <div class="col-3 buttons">Referenciáink</div>
+            <a href="#rolunk" class="links">Rólunk</a> 
             <a href="#arlista" class="links">Árlista</a>
             <a href="#kapcsolat" class="links">Kapcsolat</a>
+            <a href="#velemenyek" class="links">Vélemények</a>
         </div>
 
         <div class="mobileMenu" onclick="menuFunction()">
             <i class="fas fa-bars"></i>
             <div class="mobileMenuInnerContent">
                 <a href="#rolunk" class="mobileLinks">Rólunk</a><br>
-                <a href="#" class="mobileLinks">Referenciáink</a><br>
                 <a href="#arlista" class="mobileLinks">Árlista</a><br>
                 <a href="#kapcsolat" class="mobileLinks">Kapcsolat</a><br>
+                <a href="#velemenyek" class="mobileLinks">Vélemények</a><br>
             </div>
         </div>
         <div class="bg-success udvozli">Üdvözli önt a Kajtár Fuvarozás oldala!</div>
@@ -350,7 +384,17 @@
                 Kajtár Szilvia<br>
                 Tulajdonos<br><br>
                 <i class="fas fa-phone-volume"></i>+36 30 157 1116
-            </div>
+            </div><br>
+            <a href="https://www.facebook.com/Kajt%C3%A1r-Fuvaroz%C3%A1s-104385391146718/" class="facebookLink"><i class="fab fa-facebook-square"></i></a> 
+        </div>
+        <div class="velemenyek">
+            <h1 id="velemenyek">Vélemények</h1>
+            <hr>
+        <a href="https://www.facebook.com/joli.sepsi.5/posts/710602489687660" target="_blank" class="velemenyKartya">
+            A  megbízott munkát , pontos érkezéssel, az előzetesen megbeszéltek szerint ,
+             korrekt áron elvégezték,  mindezek alapján ajánlom a fuvarozó céget!<br>
+             <span class="nev">Joli Sepsi</span>
+        </a>
         </div>
     </div>
     <script>
