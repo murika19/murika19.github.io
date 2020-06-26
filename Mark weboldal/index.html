@@ -9,11 +9,6 @@
     <script src="https://kit.fontawesome.com/216a986463.js" crossorigin="anonymous"></script>
     <title>Kajtár Fuvarozás</title>
     <style>
-        div.navbar {
-            position: -webkit-sticky;
-            position: sticky;
-        }
-
         @media only screen and (min-width: 900px) {
             .cardText {
                 background-color: white;
@@ -44,6 +39,8 @@
                 margin: 0px;
                 position: -webkit-sticky;
                 position: sticky;
+                top: 0;
+                z-index: 999;
 
             }
 
@@ -55,6 +52,16 @@
                 text-align: center;
                 font-size: 5vw;
                 font-weight: 900;
+            }
+
+            .links {
+                background-color: darkseagreen;
+                font-size: 2vw;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
             }
         }
 
@@ -70,6 +77,9 @@
                 width: 100%;
                 border-top: 2px solid black;
                 border-bottom: 2px solid black;
+                position: sticky;
+                top: 0;
+                z-index: 999;
 
             }
 
@@ -189,6 +199,47 @@
                 opacity: 0;
             }
         }
+
+        .links {
+            background-color: darkseagreen;
+            font-size: 2vw;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            width: 25%;
+        }
+
+        .links:hover {
+            background-color: rgb(65, 117, 65);
+            font-size: 2vw;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            width: 25%;
+        }
+
+        #rolunk,
+        #arlista,
+        #kapcsolat {
+            text-align: center;
+        }
+
+        .mobileLinks {
+            width: 100%;
+            color:black;
+            text-decoration: none;
+
+        }
+        .mobileMenuInnerContent {
+            display: none;
+            width:100%;
+            background-color: darkseagreen;
+            color:black
+            }
+
+
     </style>
 </head>
 
@@ -204,17 +255,26 @@
             </div>
         </div>
         <div class="row navbar">
-            <div class="col-3 buttons">Rólunk</div>
+            <a href="#rolunk" class="links">Rólunk</a>
             <div class="col-3 buttons">Referenciáink</div>
-            <div class="col-3 buttons">Árlista</div>
-            <div class="col-3 buttons">Kapcsolat</div>
+            <a href="#arlista" class="links">Árlista</a>
+            <a href="#kapcsolat" class="links">Kapcsolat</a>
         </div>
-        <div class="mobileMenu"><i class="fas fa-bars"></i></div>
+
+        <div class="mobileMenu" onclick="menuFunction()">
+            <i class="fas fa-bars"></i>
+            <div class="mobileMenuInnerContent">
+                <a href="#rolunk" class="mobileLinks">Rólunk</a><br>
+                <a href="#" class="mobileLinks">Referenciáink</a><br>
+                <a href="#arlista" class="mobileLinks">Árlista</a><br>
+                <a href="#kapcsolat" class="mobileLinks">Kapcsolat</a><br>
+            </div>
+        </div>
         <div class="bg-success udvozli">Üdvözli önt a Kajtár Fuvarozás oldala!</div>
         <div class="bemutatkozas">
 
-            <h1>Rólunk</h1>
-            <h6>Vállalkozásom vállalja:</h6>
+            <h1 id="rolunk">Rólunk</h1><br>
+            <span>Vállalkozásom vállalja:</span><br>
             <div class="cardSitt">
                 <div class="cardText">Építési sitt</div>
             </div>
@@ -227,7 +287,7 @@
             <div class="cardEpitoanyag">
                 <div class="cardText">Építőanyag</div>
             </div><br>
-            elszállítását!
+            <span>elszállítását!</span><br>
 
             <h6>Hogy miért válasszon minket?</h6>
 
@@ -241,7 +301,7 @@
             </ul>
 
         </div>
-        <h1>Árlista</h1>
+        <h1 id="arlista">Árlista</h1>
         <table class="table-dark" id="arlista">
             <thead>
                 <tr>
@@ -270,7 +330,7 @@
         </table>
 
         <div class="kapcsolat">
-            <h1>Kapcsolat</h1>
+            <h1 id="kapcsolat">Kapcsolat</h1>
             <div class="kapcsolatKartya">
                 <div class="kepContainer">
                     <img src="/murika19.github.io/Mark weboldal/img/markKep.jpg" alt="" class="kapcsolatKep">
@@ -291,7 +351,18 @@
         </div>
     </div>
     <script>
+        let mobileMenu = document.querySelector(".mobileMenuInnerContent");
+        menuIndicator = 0;
 
+        function menuFunction() {
+            if (menuIndicator == 0) {
+                menuIndicator = 1;
+                mobileMenu.style.display = "inline-block";
+            } else {
+                menuIndicator = 0;
+                mobileMenu.style.display = "none";
+            }
+        } 
     </script>
 </body>
 
