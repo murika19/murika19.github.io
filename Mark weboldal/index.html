@@ -255,6 +255,7 @@
             display: inline-block;
             text-decoration: none;
             color:black;
+            width: 100%;
             box-shadow:8px 8px 8px 8px rgb(132, 133, 132);
         }
         .velemenyKartya:hover{
@@ -279,6 +280,9 @@
         }
         .information {
             font-size: 20px;
+        }
+        .tablazatVaros {
+            background-color: rgb(78, 72, 72);
         }
 
     </style>
@@ -348,12 +352,14 @@
         <table class="table-dark" id="arlista">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Szolgáltatás</th>
                     <th>Ár</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="bg-success">
+                    <td rowspan="4" class="tablazatVaros">Székesfehérvár</td>
                     <td>Sitt elszállítás</td>
                     <td>8000 Ft/m<sup>3</sup>-től</td>
                 </tr>
@@ -403,6 +409,31 @@
              korrekt áron elvégezték,  mindezek alapján ajánlom a fuvarozó céget!<br>
              <span class="nev">Joli Sepsi</span>
         </a>
+
+        <a href="https://www.facebook.com/istvanne.pereces/posts/3954935157914626" target="_blank" class="velemenyKartya">
+            Lomtalanítással bíztuk meg a céget amit a megbeszélt időben el is végeztek. Tiszta, gyors,  precíz munkát végeztek. Ajánlom őket.<br>
+             <span class="nev">Istvánné Pereces</span>
+        </a>
+        <a href="https://www.facebook.com/maria.meiszternesudi/posts/3136641186397446" target="_blank" class="velemenyKartya">
+            Köszönjük a gyors, precíz munkavégzést. Az első kapcsolatfelvételtől számított 1 héten belül a munkát elvégezték a nehéz megközelíthetőség és terepviszonyok ellenére is. Csak ajánlani tudom mindenkinek..<br>
+             <span class="nev">Mária Meiszterné Südi</span>
+        </a>
+        <a href="https://www.facebook.com/boglarka.benis/posts/2855459621173882" target="_blank" class="velemenyKartya">
+            Köszönjük a gyors és precíz munkát. Minden úgy történt ahogy előzetesen megbeszéltük. Korrekten és gyorsan elvégezték a feladatot. Mindezek alapján szívből ajánljuk őket, legközelebb is őket fogjuk választani.<br>
+             <span class="nev">Baténé Benis Boglárka</span>
+        </a>
+        <a href="https://www.facebook.com/szilvia.takats/posts/3602137283135714" target="_blank" class="velemenyKartya">
+            Ajánlom a céget mindenkinek, precíz, gyors és valóban korrekt áron dolgoznak! 2 napon belül teljesítették a megbízásomat...<br>
+             <span class="nev">Porvanné Takáts Szilvia</span>
+        </a>
+        <a href="https://www.facebook.com/ildiko.szalma.509/posts/166220128237971" target="_blank" class="velemenyKartya">
+            Köszönjük a gyors, precíz, pontos, megbízható munkavégzést! Már egy következő munkára is kaptunk árajánlatot amit el is fogadtunk!Csak ajánlani tudom bárkinek!!<br>
+             <span class="nev">Ildi Szalma</span>
+        </a>
+        <a href="https://www.facebook.com/noemi.lang/posts/3195436377166652" target="_blank" class="velemenyKartya">
+            köszönjük a gyors és precíz munkavégzést!<br>
+             <span class="nev">Noémi Láng</span>
+        </a>
         </div>
     </div>
     <script>
@@ -418,6 +449,12 @@
                 mobileMenu.style.display = "none";
             }
         } 
+        let kartya = document.querySelectorAll(".velemenyKartya");
+        console.log(kartya);
+        for (let i = 0;i < kartya.length; i++) {
+            kartya[i].style.display = "none";
+        }
+        kartya[0].style.display = "inline-block";
     </script>
 </body>
 
