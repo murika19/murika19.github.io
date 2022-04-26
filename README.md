@@ -1,2 +1,2 @@
 # murika19.github.io
-mark weboldala
+Dr. Egyed Zsolr
